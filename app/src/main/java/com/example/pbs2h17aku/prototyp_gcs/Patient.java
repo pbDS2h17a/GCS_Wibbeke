@@ -7,7 +7,7 @@ package com.example.pbs2h17aku.prototyp_gcs;
 public class Patient {
 
     public int gzsValue(){
-        return 1;
+        return 0;
     }
 
     public Patient(){

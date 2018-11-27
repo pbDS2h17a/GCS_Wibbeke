@@ -14,11 +14,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Buttons werden erstellt
         Button trainingB = findViewById(R.id.trainingB);
         Button statistikB  = findViewById(R.id.statistikB);
         Button hilfeB = findViewById(R.id.hilfeB);
 
 
+        //Durch die Buttons gelangt man in die Nächsten Activities
         trainingB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
