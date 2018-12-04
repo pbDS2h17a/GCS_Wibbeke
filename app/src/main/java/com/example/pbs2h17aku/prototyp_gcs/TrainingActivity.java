@@ -3,6 +3,7 @@ package com.example.pbs2h17aku.prototyp_gcs;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.DropBoxManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,12 +33,16 @@ public class TrainingActivity extends Activity {
         TextView textView = findViewById(R.id.Case);
         textView.setText(p.toString());
 
+
+
         //Reagiert bei click auf "LOS" und sendet das Ergebnis an das copyTextfeld
         losB.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-
-                if(number.getEditableText().equals(value)){
+                Log.d("DBG", "Wert:"+value);
+                Log.d("DBG","Wert:"+number.getText());
+                if(Integer.parseInt(number.getText().toString()) == value){
                     copyNumber.setText("true");
                 }
                 else{

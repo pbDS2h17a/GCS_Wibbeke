@@ -1,8 +1,5 @@
 package com.example.pbs2h17aku.prototyp_gcs;
 
-import android.nfc.Tag;
-import android.util.Log;
-
 /**
  * Created by pbs2h17asc on 27.11.2018.
  */
@@ -34,8 +31,7 @@ public class Patient {
             return cases[(this.value-1)];
         }
 
-        public static int maxValue()
-        {
+        public static int maxValue() {
             int max = 0;
 
             for (Eyes e : Eyes.values()) {
@@ -68,8 +64,7 @@ public class Patient {
             return cases[(this.value-1)];
         }
 
-        public static int maxValue()
-        {
+        public static int maxValue() {
             int max = 0;
 
             for (VerbalCommunication v : VerbalCommunication.values()) {
@@ -103,8 +98,7 @@ public class Patient {
             return cases[(this.value-1)];
         }
 
-        public static int maxValue()
-        {
+        public static int maxValue() {
             int max = 0;
 
             for (MotorResponse m : MotorResponse.values()) {
@@ -132,8 +126,7 @@ public class Patient {
         return sb.toString();
     }
 
-    public int gcsValue()
-    {
+    public int gcsValue() {
         return visualReaction+verbalReaction+physicalReaction;
     }
 }
