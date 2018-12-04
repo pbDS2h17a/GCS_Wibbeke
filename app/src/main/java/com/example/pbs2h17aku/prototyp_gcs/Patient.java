@@ -1,4 +1,7 @@
-package de.bib.pb.webpb.pbs2h17asc.gcs_trainer;
+package com.example.pbs2h17aku.prototyp_gcs;
+
+import android.nfc.Tag;
+import android.util.Log;
 
 /**
  * Created by pbs2h17asc on 27.11.2018.
@@ -26,8 +29,9 @@ public class Patient {
             this.value = value;
         }
 
+        @Override
         public String toString() {
-            return cases[this.value-1];
+            return cases[(this.value-1)];
         }
 
         public static int maxValue()
@@ -40,7 +44,7 @@ public class Patient {
 
             return max;
         }
-    };
+    }
 
     enum VerbalCommunication {
         NO_REACTION(1), NOT_UNDERSTANDABLE(2), UNCONNECTED(3), DESORIENTATED(4), ORIENTATED(5);
@@ -59,8 +63,9 @@ public class Patient {
             this.value = value;
         }
 
+        @Override
         public String toString() {
-            return cases[this.value-1];
+            return cases[(this.value-1)];
         }
 
         public static int maxValue()
@@ -93,8 +98,9 @@ public class Patient {
             this.value = value;
         }
 
+        @Override
         public String toString() {
-            return cases[this.value-1];
+            return cases[(this.value-1)];
         }
 
         public static int maxValue()
@@ -110,11 +116,12 @@ public class Patient {
     }
 
     public Patient() {
-        this.visualReaction = (int)(Math.random()*(Eyes.maxValue()+1));
-        this.verbalReaction = (int)(Math.random()*(VerbalCommunication.maxValue()+1));
-        this.physicalReaction = (int)(Math.random()*(MotorResponse.maxValue()+1));
+        this.visualReaction = (int)(Math.random() * Eyes.maxValue() + 1);
+        this.verbalReaction = (int)(Math.random() * VerbalCommunication.maxValue() + 1);
+        this.physicalReaction = (int)(Math.random() * MotorResponse.maxValue() + 1);
     }
 
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
 

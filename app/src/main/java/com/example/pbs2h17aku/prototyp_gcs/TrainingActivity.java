@@ -20,7 +20,7 @@ public class TrainingActivity extends Activity {
         Patient p = new Patient();
 
         //Der Wert wird in einem Int gespeichert um diesen zu Übernehmen
-        final int value = p.gzsValue();
+        final int value = p.gcsValue();
 
         //Das Editfeld wo die Zahl eingegeben wird
         final EditText number = findViewById(R.id.userInputNumber);
@@ -29,6 +29,8 @@ public class TrainingActivity extends Activity {
         final TextView copyNumber = findViewById(R.id.copyUserInput);
 
         Button losB = findViewById(R.id.losB);
+        TextView textView = findViewById(R.id.Case);
+        textView.setText(p.toString());
 
         //Reagiert bei click auf "LOS" und sendet das Ergebnis an das copyTextfeld
         losB.setOnClickListener(new View.OnClickListener() {
